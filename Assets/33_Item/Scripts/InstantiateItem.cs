@@ -16,7 +16,7 @@ public class InstantiateItem : MonoBehaviour
     void Start()
     {
 
-        DropItem();
+        // DropItem();
     }
 
     public  void  DropItem()

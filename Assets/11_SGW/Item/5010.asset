@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d89ae8539749f488477ec05dcf430e, type: 3}
+  m_Name: 5010
+  m_EditorClassIdentifier: 
+  id: 5010
+  itemName: "\uD654\uC5FC\uC758 \uCE74\uD0C0\uB098"
+  description: "\uBD88\uC774 \uBD99\uC740 \uAC80\uC774\uB2E4"
+  sellprice: 0
+  buyprice: 7000
+  category: 1
+  ItemType: 10003
+  IconSprite: {fileID: 0}
+  iconAddress: 
+  iconReference:
+    m_AssetGUID: 9b919716e1c473c4a97fd2358ef7a847
+    m_SubObjectName: Katana_0
+    m_SubObjectGUID: 
+    m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_EditorAssetChanged: 1
+  limitLevel: 10
+  classType: 1
+  parts: 3
+  attackPower: 17
+  magicPower: 0
+  defensePower: 0

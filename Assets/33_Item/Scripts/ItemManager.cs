@@ -2,12 +2,18 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using Google.Protobuf.Protocol;
+using Unity.Profiling;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.Profiling;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class ItemManager : MonoBehaviour
 {
+    private ProfilerMarker  marker = new ProfilerMarker("TestCode"); // ProfilerMarker 사용
+    
+    
+
     public static ItemManager Instance { get; private set; }
 
     public ItemDatabase database;
@@ -30,10 +36,53 @@ public class ItemManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        LoadItems();
         
-    }
+        // LoadItems();
     
+        
+        
+        LoadItemIcons();
+
+    }
+    //스크립터블 오브젝트를 만들어서 직접 드래그해서 넣는게 메모리에 좀더 맞지 않을까 ?
+    //고정값은 json으로 하지말기
+    /*03-22 스크립터블 오브젝트를 스크립트로 실행 할때 마다 만들고 Json 파싱해서 넣어 주면 메모리적으로 실행 해야되는게 많아서
+    그냥 스크립터블 오브젝트를 직접 만들어서 데이터를 넣어주고 리스트에 넣어주자 -- 리펙토링 자문 사항 
+     */
+    
+
+    async void LoadItemIcons()
+    {
+        foreach (var item in ItemList)
+        {
+            if (item.iconReference != null && item.iconReference.RuntimeKeyIsValid()) // ✅ 유효한 키인지 확인
+            {
+                try
+                {
+                    var handle = Addressables.LoadAssetAsync<Sprite>(item.iconReference);
+                    await handle.Task; // ✅ 비동기 로드
+
+                    if (handle.Status == AsyncOperationStatus.Succeeded)
+                    {
+                        item.IconSprite = handle.Result; // ✅ 아이콘 로드 완료
+                        Debug.Log($"✔ {item.itemName} 아이콘 로드 완료!");
+                    }
+                    else
+                    {
+                        Debug.LogError($"❌ {item.itemName} 아이콘 로드 실패! ({item.iconReference})");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.LogError($"⚠ {item.itemName} 아이콘 로드 중 예외 발생: {ex.Message}");
+                }
+            }
+            else
+            {
+                Debug.LogWarning($"⚠ {item.itemName}의 아이콘 참조가 유효하지 않음!");
+            }
+        }
+    }
 
     void LoadItems()
     {
@@ -84,13 +133,13 @@ public class ItemManager : MonoBehaviour
                     LoadItemIcon(newItem); // 아이콘 로드 시작
                 }
             }
-
-            Debug.Log("아이템 로드 완료!");
+;
         }
         else
         {
             Debug.LogError("JSON 파일을 찾을 수 없습니다!");
         }
+       
     }
 
     /// <summary>
@@ -116,7 +165,6 @@ public class ItemManager : MonoBehaviour
         };
     }
     
-
     /// <summary>
     ///  OnItemsLoaded 이벤트를 수동으로 실행할 수 있도록 함수 제공
     /// </summary>

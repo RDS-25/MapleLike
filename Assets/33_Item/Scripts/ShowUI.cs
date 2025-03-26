@@ -265,8 +265,10 @@ public class ShowUI : MonoBehaviour,IPointerEnterHandler, IPointerExitHandler
     /// </summary>
     /*
      * 구조는 구매와 동일 대신 빼기만 사용
+     *
+     *하나의 함수로 만들기
      */
-    public void SellItem(int amount)
+    public void SellItem(int amount = 1)
     {
         if (amount == 0)
         {

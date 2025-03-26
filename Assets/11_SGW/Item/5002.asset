@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d89ae8539749f488477ec05dcf430e, type: 3}
+  m_Name: 5002
+  m_EditorClassIdentifier: 
+  id: 5002
+  itemName: "\uC2A4\uD0DC\uD504"
+  description: "\uC2E0\uC785 \uB9C8\uBC95\uC0AC\uD55C\uD14C \uB9DE\uB294 \uC2A4\uD0DC\uD504\uB2E4."
+  sellprice: 0
+  buyprice: 5000
+  category: 1
+  ItemType: 20002
+  IconSprite: {fileID: 0}
+  iconAddress: 
+  iconReference:
+    m_AssetGUID: 1348f86bce938834880c6a7361182faf
+    m_SubObjectName: staff_0
+    m_SubObjectGUID: 
+    m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_EditorAssetChanged: 1
+  limitLevel: 5
+  classType: 2
+  parts: 3
+  attackPower: 0
+  magicPower: 15
+  defensePower: 0

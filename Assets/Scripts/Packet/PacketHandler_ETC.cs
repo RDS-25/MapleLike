@@ -51,7 +51,6 @@ public partial class PacketHandler
         
         ObjectManager.Instance.DespwanItem(itemDespawnPkt);
         
-        // 어떻게 아이템먹을때 호출 시킬까?
     }
     
     //먹기

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57e0c89801452bc4c8cea0c1940e954b, type: 3}
+  m_Name: 1003
+  m_EditorClassIdentifier: 
+  id: 1003
+  itemName: "\uD558\uC580 \uD3EC\uC158"
+  description: "\uBD89\uC740 \uC57D\uCD08\uC758 \uACE0\uB18D\uCD95 \uBB3C\uC57D\uC774\uB2E4.
+    \\n HP\uB97C \uC57D 300 \uD68C\uBCF5\uC2DC\uD0A8\uB2E4."
+  sellprice: 0
+  buyprice: 200
+  category: 0
+  ItemType: 101
+  IconSprite: {fileID: 0}
+  iconAddress: 
+  iconReference:
+    m_AssetGUID: 7db888ae64b04a349a4642870fa55628
+    m_SubObjectName: Mppotion2_0
+    m_SubObjectGUID: 
+    m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_EditorAssetChanged: 1
+  healAmount: 300
+  MpAmount: 0

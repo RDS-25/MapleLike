@@ -1,5 +1,6 @@
 using Google.Protobuf.Protocol;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 
 
@@ -23,5 +24,7 @@ public abstract class Item : ScriptableObject
     public ItemCategory category; // Consumable or Equipment
     public ItemType ItemType; //서버에 관한 아이템 타입
     public Sprite IconSprite;
-    public string iconAddress; // Addressables에서 사용할 아이콘 주소
+    public string iconAddress; // Addressables에서 사용할 아이콘 주소값만 가지고 있는것 
+    
+    public AssetReferenceT<Sprite> iconReference; //Addressables에서 사용할 아이콘 주소값만 가지고 있는것
 }

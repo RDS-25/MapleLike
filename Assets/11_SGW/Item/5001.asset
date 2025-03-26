@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d89ae8539749f488477ec05dcf430e, type: 3}
+  m_Name: 5001
+  m_EditorClassIdentifier: 
+  id: 5001
+  itemName: "\uD65C"
+  description: "\uADF8\uB807\uC800\uB7ED \uC0AC\uC6A9 \uD560 \uC218 \uC788\uC744
+    \uAC70 \uAC19\uB2E4"
+  sellprice: 0
+  buyprice: 5000
+  category: 1
+  ItemType: 30002
+  IconSprite: {fileID: 0}
+  iconAddress: 
+  iconReference:
+    m_AssetGUID: 516ae43c7e952154b9a1456d6fbfc74f
+    m_SubObjectName: Bow_0
+    m_SubObjectGUID: 
+    m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_EditorAssetChanged: 1
+  limitLevel: 5
+  classType: 3
+  parts: 3
+  attackPower: 15
+  magicPower: 0
+  defensePower: 0
